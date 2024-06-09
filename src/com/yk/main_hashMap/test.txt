@@ -1,0 +1,5 @@
+Ivan : 46
+Martha : 0.3
+Anna : 10
+Tanya : 37
+Igor : 16
