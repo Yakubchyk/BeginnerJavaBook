@@ -2,9 +2,9 @@ package com.yk.main_hashMap;
 
 public class Person {
     private String name;
-    private int age;
+    private Double age;
 
-    public Person(String name, int age) {
+    public Person(String name, double age) {
         this.name = name;
         this.age = age;
     }
@@ -17,12 +17,19 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
+    public double getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(double age) {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

@@ -8,12 +8,12 @@ import java.util.Map;
 
 public class ReadMap {
 
-    public void readMap() {
+    public Map<String, Double> readMap() {
         String userPath = System.getProperty("user.dir");
         String path = userPath + "/src/com/yk/main_hashMap/test.txt";
-        try (BufferedReader bw = new BufferedReader(new FileReader(path))) {
+        Map<String, Double> map = new HashMap<>();
 
-            Map<String, Double> map = new HashMap<>();
+        try (BufferedReader bw = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = bw.readLine()) != null) {
                 String[] parts = line.split(" : ");
@@ -23,12 +23,11 @@ public class ReadMap {
                     map.put(key, value);
                 }
             }
-
-            System.out.println(map);
-
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException("Error reading file", e);
         }
+
+        map.forEach((k, v) -> System.out.println(k + " : " + v));
+        return map;
     }
 }

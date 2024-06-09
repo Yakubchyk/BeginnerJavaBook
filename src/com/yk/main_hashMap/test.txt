@@ -1,5 +1,6 @@
 Ivan : 46
+Tanya : 37
 Martha : 0.3
 Anna : 10
-Tanya : 37
 Igor : 16
+Babushka Kusina : 150
